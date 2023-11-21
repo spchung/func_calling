@@ -1,0 +1,5 @@
+.env
+/include
+/bin
+/lib
+/.vscode
