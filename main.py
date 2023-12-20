@@ -17,7 +17,6 @@ class UserDetail(OpenAISchema):
     name: str
     age: int
 
-
 class Item(OpenAISchema):
     name: str
     price: int
@@ -26,9 +25,9 @@ class Item(OpenAISchema):
 class CallClass:
     def __init__(self, name, age):
         self.name = name
-        self.age = age 
+        self.age = age
         self.func = lambda : print(self.name)
-    
+
     def __call__(self, *args: Any, **kwds: Any) -> Any:
         @wraps(self.func)
         def wrapper(*args: Any, **kwds: Any) -> Any:
@@ -55,6 +54,7 @@ def main():
     # res = client2.chat.completions.create(
     #     **d
     # )
+
     pprint(res)
     c = CallClass("Jason", 25)
     c()

@@ -1,0 +1,11 @@
+How this project would work
+
+Take user input
+
+1. classify user question
+    - that matches the features provided
+
+2. If matches then extract arguments in JSON
+
+3. Perform actions
+    - call api with extracted arguments
